@@ -4,20 +4,20 @@
             {
                 "title": "History of Board Games",
                 "year": "2600BC",
-                "wiki-url": "https://en.wikipedia.org/wiki/Board_game",
-                "image-url": "./images/board_games.jpg"
+                "wiki_url": "https://en.wikipedia.org/wiki/Board_game",
+                "image_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/board_games.jpeg"
             },
             {
                 "title": "History of Connect 4",
                 "year": "2600BC",
-                "wiki-url": "https://en.wikipedia.org/wiki/Connect_Four",
-                "image-url": "./images/Connect-four.jpg"
+                "wiki_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Connect_Four",
+                "image_url": "./images/Connect-four.jpg"
             },
             {
                 "title": "History of Tic-tac-toe",
                 "year": "2600BC",
-                "wiki-url": "https://en.wikipedia.org/wiki/Tic-tac-toe",
-                "image-url": "./images/Tic_tac_toe.png"
+                "wiki_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Tic-tac-toe",
+                "image_url": "./images/Tic_tac_toe.png"
             }
         ],
         "connect4": [
