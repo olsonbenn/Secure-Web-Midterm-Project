@@ -74,6 +74,12 @@
         .cell:hover {
             background-color: #f0f0f0;
         }
+
+        .cell img {
+            width: 80%;
+            height: 80%;
+            pointer-events: none; /* Ensures clicks are registered on the cell, not the image */
+        }
     </style>
 
     <script>
@@ -85,6 +91,10 @@
         let currentPlayer = "X";
         let gameState = ["", "", "", "", "", "", "", "", ""];
 
+        let xImageSrc = '';
+        let oImageSrc = '';
+        let refreshIconSrc = '';
+
         const winningConditions = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
             [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
@@ -95,19 +105,40 @@
         const drawMessage = () => `Game ended in a draw!`;
         const currentPlayerTurn = () => `Player ${currentPlayer}'s turn`;
 
-        statusDisplay.innerHTML = currentPlayerTurn();
+        function initializeGame() {
+            statusDisplay.innerHTML = currentPlayerTurn();
+            cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+            resetButton.addEventListener('click', handleResetGame);
+        }
+
+        // Fetch image paths from data.JSON
+        fetch('data.JSON')
+            .then(response => response.json())
+            .then(data => {
+                xImageSrc = data.games.ticTacToe.playerX_piece;
+                oImageSrc = data.games.ticTacToe.playerO_piece;
+                refreshIconSrc = data.games.ticTacToe.refresh;
+
+                // Update reset button with fetched icon
+                resetButton.innerHTML = `<img src="${refreshIconSrc}" alt="Refresh" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"> Reset Game`;
+
+                initializeGame();
+            })
+            .catch(error => {
+                console.error("Could not load game assets from data.JSON. Using text fallback.", error);
+                // Fallback to text if JSON is not found or has an error
+                initializeGame();
+            });
 
         function handleCellClick(clickedCellEvent) {
             const clickedCell = clickedCellEvent.target;
             const clickedCellIndex = Array.from(cells).indexOf(clickedCell);
 
-            if (gameState[clickedCellIndex] !== "" || !gameActive) {
-                return;
-            }
+            if (gameState[clickedCellIndex] !== "" || !gameActive) return;
 
             gameState[clickedCellIndex] = currentPlayer;
-            clickedCell.innerHTML = currentPlayer;
-
+            // Use images if available, otherwise fall back to text
+            clickedCell.innerHTML = xImageSrc ? `<img src="${currentPlayer === 'X' ? xImageSrc : oImageSrc}" alt="${currentPlayer}">` : currentPlayer;
             handleResultValidation();
         }
 
@@ -148,9 +179,6 @@
             statusDisplay.innerHTML = currentPlayerTurn();
             cells.forEach(cell => cell.innerHTML = "");
         }
-
-        cells.forEach(cell => cell.addEventListener('click', handleCellClick));
-        resetButton.addEventListener('click', handleResetGame);
     </script>
 
 </body>

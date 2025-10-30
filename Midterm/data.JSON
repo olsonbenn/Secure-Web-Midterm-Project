@@ -1,22 +1,13 @@
 {
-    "images": [
-        {
-
+    "games": {
+        "connect4": {
+            "player1_piece": "red_piece.png",
+            "player2_piece": "yellow_piece.png"
         },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        }, 
-        {
-
+        "ticTacToe": {
+            "playerX_piece": "https://www.svgrepo.com/show/499592/close-x.svg",
+            "playerO_piece": "https://www.svgrepo.com/show/472742/o.svg",
+            "refresh": "https://www.svgrepo.com/show/349612/refresh.svg"
         }
-    ]
+    }
 }
