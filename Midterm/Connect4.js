@@ -130,10 +130,16 @@ function pieceClicked(value) {
         }
     }}
 }
-
+function loadImages(data) {
+    
+}
 function load() {
     setupGrid();  
     startButton();
+    /*fetch("./data.JSON")
+        .then(response => response.json())
+        .then(data => loadImages(data))
+        .catch(error => console.log("Error"+error));*/
     console.log(boardSquares);
 }
 

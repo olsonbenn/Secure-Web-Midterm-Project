@@ -1,9 +1,36 @@
 {
-    "games": {
-        "connect4": {
-            "player1_piece": "red_piece.png",
-            "player2_piece": "yellow_piece.png"
-        },
+    "pages": {
+        "index": [
+            {
+                "title": "History of Board Games",
+                "year": "2600BC",
+                "wiki-url": "https://en.wikipedia.org/wiki/Board_game",
+                "image-url": "./images/board_games.jpg"
+            },
+            {
+                "title": "History of Connect 4",
+                "year": "2600BC",
+                "wiki-url": "https://en.wikipedia.org/wiki/Connect_Four",
+                "image-url": "./images/Connect-four.jpg"
+            },
+            {
+                "title": "History of Tic-tac-toe",
+                "year": "2600BC",
+                "wiki-url": "https://en.wikipedia.org/wiki/Tic-tac-toe",
+                "image-url": "./images/Tic_tac_toe.png"
+            }
+        ],
+        "connect4": [
+            {               
+                "src": "./images/red_piece.png"
+            },
+            {         
+                "src": "./images/blue_piece.png"
+            }, 
+            {
+                "src": "./images/win_piece.png"
+            }
+        ],
         "ticTacToe": {
             "playerX_piece": "https://www.svgrepo.com/show/499592/close-x.svg",
             "playerO_piece": "https://www.svgrepo.com/show/472742/o.svg",
