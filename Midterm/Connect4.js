@@ -136,10 +136,10 @@ function loadImages(data) {
 function load() {
     setupGrid();  
     startButton();
-    /*fetch("./data.JSON")
+    fetch("https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/data.JSON")
         .then(response => response.json())
         .then(data => loadImages(data))
-        .catch(error => console.log("Error"+error));*/
+        .catch(error => console.log("Error"+error));
     console.log(boardSquares);
 }
 

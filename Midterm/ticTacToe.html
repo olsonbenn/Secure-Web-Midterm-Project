@@ -112,7 +112,7 @@
         }
 
         // Fetch image paths from data.JSON
-        fetch('data.JSON')
+        fetch('https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/data.JSON')
             .then(response => response.json())
             .then(data => {
                 xImageSrc = data.games.ticTacToe.playerX_piece;
