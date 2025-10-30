@@ -10,14 +10,14 @@
             {
                 "title": "History of Connect 4",
                 "year": "2600BC",
-                "wiki_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Connect_Four",
-                "image_url": "./images/Connect-four.jpg"
+                "wiki_url": "https://en.wikipedia.org/wiki/Connect_Four",
+                "image_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Connect_Four"
             },
             {
                 "title": "History of Tic-tac-toe",
                 "year": "2600BC",
-                "wiki_url": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Tic-tac-toe",
-                "image_url": "./images/Tic_tac_toe.png"
+                "wikiurl": "https://en.wikipedia.org/wiki/Tic-tac-toe",
+                "imageurl": "https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/images/Tic-tac-toe"
             }
         ],
         "connect4": [
