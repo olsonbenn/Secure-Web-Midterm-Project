@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <link href="./styles/Connect4.css" rel="stylesheet">
     <title>Connect 4</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Secure Web Games</a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,8 +35,12 @@
     </nav>
     <div class="container text-center mt-5">
         <h1>Connect 4</h1>
+        <h2 id="status" class="mb-4"></h2>
+
+        <div id="board" class="grid-container mx-auto"></div> 
+
+        <button id="start" class="btn btn-primary mt-4">Start Game</button> 
     </div>
-
+    <script src = "./Connect4.js"> </script>
 </body>
-
 </html>
