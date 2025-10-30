@@ -3,6 +3,7 @@ const GRID_HEIGHT = 6;
 const boardSquares = new Map();
 let playerTurn = 0;
 let started = false;
+let ended = false;
 
 function setupGrid () {
     let board = document.getElementById("board");
@@ -26,6 +27,22 @@ function startGame () {
     started = true;
     placePiece();
 };
+function resetGame () {
+    playerTurn = 0;
+    let status = document.getElementById("status");
+    status.innerText = "Waiting for game to start"
+    started = false;
+    ended = false;
+    for(let i=0; i < GRID_HEIGHT * GRID_WIDTH; i++) {
+        boardSquares.set(i, 0);
+    }
+    let p1 = document.querySelectorAll(".cell");
+    p1.forEach((value) => {
+        while(value.firstChild) {    
+            value.removeChild(value.firstChild);
+        }
+    }); 
+};
 function switchTurn() {
     if(!started) {return;} else {
     let status = document.getElementById("status");
@@ -46,9 +63,14 @@ function switchTurn() {
 
 function startButton() {
     b1 = document.querySelector("#start");
-    b1.addEventListener("click", function() {     
-        b1.innerText = "Started!";
-        startGame();
+    b1.addEventListener("click", function() { 
+        if(!started && !ended) {  
+            b1.innerText = "Reset";
+            startGame();
+        } else {
+            b1.innerText = "Start Game";
+            resetGame();
+        }
     })
     
 }
@@ -61,28 +83,25 @@ function detectWin() {
                 if( boardSquares.get(key) == boardSquares.get(key - 7) &&
                     boardSquares.get(key) == boardSquares.get(key - 14) &&
                     boardSquares.get(key) == boardSquares.get(key - 21)
-                ) {console.log("I win!");
-                    started = false; 
-                    status.innerText = "Player " + playerTurn + " has won!"; 
-                    }
+                ) {started = false; status.innerText = "Player " + playerTurn + " has won!"; ended = true;}
             } 
             if (key % GRID_WIDTH >= 3) {
                 if( boardSquares.get(key) == boardSquares.get(key - 1) &&
                     boardSquares.get(key) == boardSquares.get(key - 2) &&
                     boardSquares.get(key) == boardSquares.get(key - 3)
-                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;}
+                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;  ended = true;}
             }
             if (key % GRID_WIDTH >= 3 && key >= GRID_WIDTH * 3) {
                 if( boardSquares.get(key) == boardSquares.get(key - 1 - 7) &&
                     boardSquares.get(key) == boardSquares.get(key - 2 - 14) &&
                     boardSquares.get(key) == boardSquares.get(key - 3 - 21)
-                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;}
+                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;  ended = true;}
             }
             if (key % GRID_WIDTH >= 3 && key <= (GRID_HEIGHT * GRID_WIDTH) - (GRID_WIDTH * 3)) {
                 if( boardSquares.get(key) == boardSquares.get(key - 1 + 7) &&
                     boardSquares.get(key) == boardSquares.get(key - 2 + 14) &&
                     boardSquares.get(key) == boardSquares.get(key - 3 + 21)
-                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;}
+                ) {status.innerText = "Player " + playerTurn + " has won!"; started = false;  ended = true;}
             }
         }
     }
@@ -136,10 +155,6 @@ function loadImages(data) {
 function load() {
     setupGrid();  
     startButton();
-    fetch("https://olsonbenn.github.io/Secure-Web-Midterm-Project/Midterm/data.JSON")
-        .then(response => response.json())
-        .then(data => loadImages(data))
-        .catch(error => console.log("Error"+error));
     console.log(boardSquares);
 }
 
