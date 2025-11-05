@@ -1,15 +1,15 @@
 import {useState, useEffect} from "react";
 
-const Cart = ({v, setV}) => {
+const Cart = ({d, setD, v, setV}) => {
     const [cart, setCart] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
     
     const onSubmit = () => {
         setV(0);
-        //setD(data);
+        setD({});
     }
 
-    const cartItems = cart.map((element, index) => (
+    const cartItems = d.map((element, index) => (
         <div key={index}>
             <img src={element.image} width={150} alt={element.id} />
             {element.title}
@@ -20,8 +20,8 @@ const Cart = ({v, setV}) => {
     useEffect(()=>{
         const total = () => {
             let totalAmount = 0;
-            for (let i=0; i<cart.length; i++){
-                totalAmount += cart[i].price;
+            for (let i=0; i<d.length; i++){
+                totalAmount += d[i].price;
             }
             setCartTotal(totalAmount);
             console.log(totalAmount);

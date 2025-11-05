@@ -1,14 +1,12 @@
 import {useState, useEffect} from "react";
 
-const Product= ({v, setV})=>{
+const Product= ({d, setD, v, setV})=>{
     const [catalog, setCatalog] = useState([]);
     const [cart, setCart] = useState([]);
 
     const onSubmit = () => {
-        //console.log(data);
-        //console.log(data.fullName);
         setV(1);
-        //setD(data);
+        setD(cart);
     }
 
     const addToCart = (element) => {
@@ -35,7 +33,9 @@ const Product= ({v, setV})=>{
             {element.title}
             {element.category}
             {element.price}
-            
+            <button type="button" onClick={() => removeFromCart(element)}>-</button>{" "}
+            <button type="button" variant="light" onClick={() => addToCart(element)}> +
+            </button>
         </div>
     });
 
