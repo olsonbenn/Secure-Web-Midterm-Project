@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Grinning Face",
+    "category": "Smileys & Emotion",
+    "unicode": "😀",
+    "description": "A classic smiley face with a big, open-mouthed grin. Expresses general happiness and good cheer."
+  },
+  {
+    "id": 2,
+    "name": "Waving Hand",
+    "category": "People & Body",
+    "unicode": "👋",
+    "description": "A hand raised in a waving gesture. Used to say 'hello' or 'goodbye'."
+  },
+  {
+    "id": 3,
+    "name": "Red Apple",
+    "category": "Food & Drink",
+    "unicode": "🍎",
+    "description": "A ripe, red apple. Often associated with health, teachers, and New York City."
+  }
+,
+  {
+    "id": 4,
+    "name": "Rocket",
+    "category": "Travel & Places",
+    "unicode": "🚀",
+    "description": "A rocket launching into space. Represents speed, progress, and ambition."
+  },
+  {
+    "id": 5,
+    "name": "Cat Face",
+    "category": "Animals & Nature",
+    "unicode": "🐱",
+    "description": "The friendly, whiskered face of a cat. A favorite for cat lovers."
+  },
+  {
+    "id": 6,
+    "name": "Pizza",
+    "category": "Food & Drink",
+    "unicode": "🍕",
+    "description": "A slice of pepperoni pizza. A universally loved food, perfect for sharing."
+  },
+  {
+    "id": 7,
+    "name": "Soccer Ball",
+    "category": "Activities",
+    "unicode": "⚽",
+    "description": "A classic black and white soccer ball. Represents the world's most popular sport."
+  },
+  {
+    "id": 8,
+    "name": "Light Bulb",
+    "category": "Objects",
+    "unicode": "💡",
+    "description": "A glowing light bulb. Symbolizes a new idea, inspiration, or a moment of clarity."
+  },
+  {
+    "id": 9,
+    "name": "Heart with Arrow",
+    "category": "Symbols",
+    "unicode": "💘",
+    "description": "A heart pierced by Cupid's arrow. Represents falling in love or being lovestruck."
+  },
+  {
+    "id": 10,
+    "name": "United States Flag",
+    "category": "Flags",
+    "unicode": "🇺🇸",
+    "description": "The national flag of the United States of America, also known as the Stars and Stripes."
+  },
+  {
+    "id": 11,
+    "name": "Smiling Face with Sunglasses",
+    "category": "Smileys & Emotion",
+    "unicode": "😎",
+    "description": "A smiling face wearing sunglasses. Conveys a sense of cool, confidence, or ease."
+  },
+  {
+    "id": 12,
+    "name": "Thumbs Up",
+    "category": "People & Body",
+    "unicode": "👍",
+    "description": "A hand with the thumb extended upward. A gesture of approval, agreement, or encouragement."
+  },
+  {
+    "id": 13,
+    "name": "Dog Face",
+    "category": "Animals & Nature",
+    "unicode": "🐶",
+    "description": "The friendly face of a dog. Represents loyalty and companionship."
+  },
+  {
+    "id": 14,
+    "name": "Hamburger",
+    "category": "Food & Drink",
+    "unicode": "🍔",
+    "description": "A classic hamburger with a sesame seed bun. A staple of fast food."
+  },
+  {
+    "id": 15,
+    "name": "Basketball",
+    "category": "Activities",
+    "unicode": "🏀",
+    "description": "An orange basketball. Used in the popular sport of the same name."
+  },
+  {
+    "id": 16,
+    "name": "Laptop",
+    "category": "Objects",
+    "unicode": "💻",
+    "description": "A portable laptop computer. Represents work, technology, and connectivity."
+  },
+  {
+    "id": 17,
+    "name": "Check Mark Button",
+    "category": "Symbols",
+    "unicode": "✅",
+    "description": "A green square with a white check mark. Indicates completion, correctness, or confirmation."
+  },
+  {
+    "id": 18,
+    "name": "Canadian Flag",
+    "category": "Flags",
+    "unicode": "🇨🇦",
+    "description": "The national flag of Canada, featuring a prominent red maple leaf."
+  },
+  {
+    "id": 19,
+    "name": "Face with Tears of Joy",
+    "category": "Smileys & Emotion",
+    "unicode": "😂",
+    "description": "A face laughing so hard that it's crying. Used to show something is extremely funny."
+  },
+  {
+    "id": 20,
+    "name": "Brain",
+    "category": "People & Body",
+    "unicode": "🧠",
+    "description": "A human brain. Represents intelligence, thinking, and knowledge."
+  },
+  {
+    "id": 21,
+    "name": "Pineapple",
+    "category": "Food & Drink",
+    "unicode": "🍍",
+    "description": "A tropical pineapple fruit. A symbol of hospitality and warm welcomes."
+  },
+  {
+    "id": 22,
+    "name": "Musical Note",
+    "category": "Objects",
+    "unicode": "🎵",
+    "description": "A single musical note. Represents music, singing, or a melody."
+  },
+  {
+    "id": 23,
+    "name": "Thinking Face",
+    "category": "Smileys & Emotion",
+    "unicode": "🤔",
+    "description": "A face with a hand on its chin, looking upwards. Indicates deep thought or contemplation."
+  },
+  {
+    "id": 24,
+    "name": "Fire",
+    "category": "Animals & Nature",
+    "unicode": "🔥",
+    "description": "A burning flame. Can mean something is literally on fire, or that it's 'lit' (excellent or cool)."
+  },
+  {
+    "id": 25,
+    "name": "Trophy",
+    "category": "Activities",
+    "unicode": "🏆",
+    "description": "A golden trophy cup. Represents victory, achievement, and being a champion."
+  }
+]

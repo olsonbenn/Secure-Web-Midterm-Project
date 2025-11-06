@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.emoji-card .card-img-top {
+    font-size: 100px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
