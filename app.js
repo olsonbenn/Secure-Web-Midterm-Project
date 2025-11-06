@@ -6,7 +6,7 @@
     const loader = document.getElementById('loader');
 
     let allEmojis = [];
-    let url = "./data.json";
+    let url = "https://olsonbenn.github.io/Secure-Web-Dev-Team06/data.json";
     // Fetch emoji data from JSON file
     const fetchEmojis = async () => {
         try {
